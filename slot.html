@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Conclusie</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="assets/css/stylesheet.css"
+        />
+        <script src="assets/js/script.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap"
+            rel="stylesheet"
+        />
+
+        <script
+            src="https://kit.fontawesome.com/11338d59f9.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <h1><span class="emotionAccentuate">Wat</span> was je vandaag?</h1>
+            <div id="box"></div>
+        </header>
+        <div id="circlesHeader">
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+        </div>
+        <main>
+            <div id="endingContainer">
+                <h1 id="endingSentence">...</h1>
+                <div class="slotDivider"></div>
+                <h2 id="krachtSentence">...</h2>
+                <div class="slotDivider"></div>
+                <h2 id="oefeningSentence">...</h2>
+            </div>
+        </main>
+        <div
+            id="terugKnop"
+            onclick="location.href='index.html'"
+            style="cursor: pointer"
+        >
+            <i class="fas fa-door-open"></i>
+        </div>
+    </body>
+    <script>
+        console.log(params);
+
+        let sortable = [];
+        for (var param in params) {
+            sortable.push([param, params[param]]);
+        }
+
+        sortable.sort(function (a, b) {
+            return a[1] - b[1];
+        });
+
+        console.log(sortable[3]);
+        document.getElementById("endingSentence").innerHTML =
+            "Je bent " + sortable[3][0] + " vandaag!";
+
+        if (sortable[3][0] === "blij") {
+            document.getElementById("krachtSentence").innerHTML =
+                "Als jij blij bent, maak je anderen ook blij.";
+            document.getElementById("oefeningSentence").innerHTML =
+                "Wie of wat heeft jou blij gemaakt vandaag? Teken of vertel het.";
+        } else if (sortable[3][0] === "boos") {
+            document.getElementById("krachtSentence").innerHTML =
+                "Boos zijn helpt je om te zeggen dat iets niet eerlijk is.";
+            document.getElementById("oefeningSentence").innerHTML =
+                "Stamp drie keer met je voeten en adem dan diep in en uit. Wat maakte je boos?";
+        } else if (sortable[3][0] === "verdrietig") {
+            document.getElementById("krachtSentence").innerHTML =
+                "Als je verdrietig bent, weten anderen dat je troost nodig hebt en kunnen ze je helpen.";
+            document.getElementById("oefeningSentence").innerHTML =
+                "Knuffel je lievelingsknuffel of een zachte deken. Wat maakt je verdrietig?";
+        } else if (sortable[3][0] === "bang") {
+            document.getElementById("krachtSentence").innerHTML =
+                "Bang zijn helpt je om voorzichtig te zijn als iets spannend of gevaarlijk is.";
+            document.getElementById("oefeningSentence").innerHTML =
+                "Teken je angst als een monster en geef het een grappige naam.";
+        } else {
+            document.getElementById("endingSentence").innerHTML =
+                "Error! Probeer opnieuw!";
+        }
+    </script>
+</html>

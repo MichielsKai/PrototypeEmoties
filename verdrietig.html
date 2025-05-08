@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Verdrietig?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="assets/css/stylesheet.css"
+        />
+        <script src="assets/js/script.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap"
+            rel="stylesheet"
+        />
+
+        <script
+            src="https://kit.fontawesome.com/11338d59f9.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Hoe <span class="emotionAccentuate">verdrietig</span> was je
+                vandaag?
+            </h1>
+            <div id="box"></div>
+        </header>
+        <div id="circlesHeader">
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+            <div class="circleOfHeader"></div>
+        </div>
+        <main>
+            <div id="emotionContainer">
+                <div
+                    class="choiceOfEmotion colorSad"
+                    onclick="location.href='bang.html?blij=' + params.blij + '&boos=' + params.boos + '&verdrietig=1';"
+                    style="cursor: pointer"
+                >
+                    <p class="emoji">😐</p>
+                    <div class="boxOptionEmoji">
+                        <h1>1</h1>
+                    </div>
+                </div>
+                <div
+                    class="choiceOfEmotion colorSad"
+                    onclick="location.href='bang.html?blij=' + params.blij + '&boos=' + params.boos + '&verdrietig=2';"
+                    style="cursor: pointer"
+                >
+                    <p class="emoji">😟</p>
+                    <div class="boxOptionEmoji">
+                        <h1>2</h1>
+                    </div>
+                </div>
+                <div
+                    class="choiceOfEmotion colorSad"
+                    onclick="location.href='bang.html?blij=' + params.blij + '&boos=' + params.boos + '&verdrietig=3';"
+                    style="cursor: pointer"
+                >
+                    <p class="emoji">🥺</p>
+                    <div class="boxOptionEmoji">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <div
+                    class="choiceOfEmotion colorSad"
+                    onclick="location.href='bang.html?blij=' + params.blij + '&boos=' + params.boos + '&verdrietig=4';"
+                    style="cursor: pointer"
+                >
+                    <p class="emoji">😢</p>
+                    <div class="boxOptionEmoji">
+                        <h1>4</h1>
+                    </div>
+                </div>
+                <div
+                    class="choiceOfEmotion colorSad"
+                    onclick="location.href='bang.html?blij=' + params.blij + '&boos=' + params.boos + '&verdrietig=5';"
+                    style="cursor: pointer"
+                >
+                    <p class="emoji">😭</p>
+                    <div class="boxOptionEmoji">
+                        <h1>5</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="emotionBox"></div>
+        </main>
+        <div
+            id="terugKnop"
+            onclick="location.href='index.html'"
+            style="cursor: pointer"
+        >
+            <i class="fas fa-door-open"></i>
+        </div>
+    </body>
+</html>
