@@ -176,6 +176,7 @@ main {
     background-color: #84a2f1;
     bottom: 20px;
     left: 20px;
+    border-radius: 5px;
 }
 #terugKnop i {
     font-size: 30px;
